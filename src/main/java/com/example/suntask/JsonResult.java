@@ -3,6 +3,7 @@ public class JsonResult {
     private int input1;
     private int input2;
 
+    private int result;
     public void setInput1(int input1) {
         this.input1 = input1;
     }
@@ -27,5 +28,5 @@ public class JsonResult {
         return result;
     }
 
-    private int result;
+
 }

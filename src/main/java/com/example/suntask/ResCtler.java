@@ -11,18 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class ResCtler {
     private static final Logger logger = LoggerFactory.getLogger(ResCtler.class);
 
-    @PostMapping("/add")
+    @PostMapping("/add/{firstParameter}/{secondParameter}/{thirdParameter}")
     @ResponseBody
-        public AdditionRes addNumbers(@RequestBody Addition addition)
-        {
-            logger.info("Adding {} and {}. Result: {}", addition.getNum1(), addition.getNum2());
-            AdditionRes result = new AdditionRes();
-            result.setInput1(addition.getNum1());
-            result.setInput2(addition.getNum2());
+        public JsonResult Numbers( @PathVariable int firstParameter,
+                                       @PathVariable int secondParameter, @PathVariable char thirdParameter) {
 
-            int addResult = AdditionFunction.add(addition.getNum1(), addition.getNum2());
+        // Perform some logic with the parameters.
+        JsonResult result = new JsonResult();
+        result.setInput1(firstParameter);
+        result.setInput2(secondParameter);
+
+            int addResult = MathOperations.fun(firstParameter, secondParameter, thirdParameter);
             result.setResult(addResult);
             return result;
-        }    }
 
+    }}
 

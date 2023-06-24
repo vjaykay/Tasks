@@ -1,5 +1,5 @@
 package com.example.suntask;
-public class AdditionRes {
+public class JsonResult {
     private int input1;
     private int input2;
 

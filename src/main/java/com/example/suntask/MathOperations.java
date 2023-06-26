@@ -11,9 +11,12 @@ public class MathOperations {
             return num1 * num2;
 
         }
-        else
+        else if (symbol == '/')
         {
             return num1 / num2;
+        }
+        else{
+            return 0;
         }
     }
 

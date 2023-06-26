@@ -53,13 +53,13 @@ public class MathOperationsTest {
             assertEquals(expected, result);
         }
 
-        //@Test
-        public void testFun_Modulo() {
+        @Test
+        public void testFun_Division() {
             // Arrange
             int num1 = 5;
             int num2 = 3;
-            char symbol = '%';
-            int expected = 2;
+            char symbol = '/';
+            int expected = 1;
 
             // Act
             int result = MathOperations.fun(num1, num2, symbol);
@@ -67,6 +67,12 @@ public class MathOperationsTest {
             // Assert
             assertEquals(expected, result);
         }
+
+    @Test
+    public void testInvalidSymbol() {
+        int result = MathOperations.fun(5, 3, '%');
+        assertEquals(0, result);
+    }
     }
 
 

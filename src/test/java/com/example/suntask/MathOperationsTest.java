@@ -1,5 +1,6 @@
 package com.example.suntask;
 
+import com.example.suntask.service.MathOperations;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

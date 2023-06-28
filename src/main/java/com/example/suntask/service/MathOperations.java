@@ -1,4 +1,4 @@
-package com.example.suntask;
+package com.example.suntask.service;
 
 public class MathOperations {
     public static int fun(int num1, int num2, char symbol) {
